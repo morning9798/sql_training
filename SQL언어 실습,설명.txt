@@ -1,0 +1,39 @@
+ https://www.w3schools.com/mysql/trymysql.asp?filename=trysql_select_all
+  위의 사이트에서 실습해볼 수 있음
+* 대문자로만 쓰여진 것은 명령어 , 아닌 것은 사용자가 지정한 이름 *
+
+
+
+			SELECT 부분
+
+SELECT * FROM Customers;  -- 고객(Customers)이란 테이블에서(FROM) 모두(*) 가져오겠다(SELECT)
+
+SELECT CustomerName FROM Customers;  -- 고객이름(CustomerName)만 가져오기, 원하는 열을 불러옮
+
+SELECT * FROM Orders WHERE EmployeeID = 3  -- 주문(Orders)들 중 직원아이디가 3인 직원들만(WHERE) 가져오기, 원하는 행을 불러옮
+
+SELECT * FROM OrderDetails ORDER BY ProductID ASC  -- 상품 정보(OrderDetails)의 아이디(ProductID)를 오름차순(ASC)로 정렬(ORDER BY)
+
+SELECT * FROM Customers LIMIT 5  -- 고객(Customers)을 5명만(LIMIT) 가져오기
+
+SELECT CustomerID AS ID FROM Customers;  -- 고객ID(CustomerID)를 ID로 간단하게 지정(AS)해서 가져오기
+
+SELECT OrderID + ProductID FROM OrderDetails;  -- 사칙연산도 가능, 문자열은 0으로 인식, 숫자로 구성된 문자열은 숫자로 인식
+
+SELECT * FROM Orders WHERE CustomerId = 10 AND EmployeeId = 5;  
+-- AND :  양 쪽 값이 참일 때
+ OR : 양 쪽 값 중 하나라도 참일 때
+ <> : 크거나 작을 때
+ BETWEEN x AND y : x와y 값 사이일 때
+ IN(x,y) : 괄호안의 값들이 일치 하는 것들만
+ 'HELLO' LIKE 'HE%' : HE로 끝나거나 뒤에 더 붙은 경우
+ 'HELLO' LIKE 'H____' : H로 시작해 밑줄(_) 개수만큼 올 경우
+
+
+
+
+PRIMARY KEY : 대표 값을 지정할 수 있음, NULL이 들어 갈 수 없으므로	not null 이라는 제약을 걸어둠
+
+
+
+
